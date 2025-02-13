@@ -40,13 +40,15 @@ const calculateExercises = (
   };
 };
 
-const target = Number(process.argv[2]);
-const hours = process.argv.slice(3).map(Number);
+if (require.main === module) {
+  const target = Number(process.argv[2]);
+  const hours = process.argv.slice(3).map(Number);
 
-if (isNaN(target) || hours.some(isNaN)) {
-  console.log("Invalid input, must be numbers");
-} else {
-  console.log(calculateExercises(hours, target));
+  if (isNaN(target) || hours.some(isNaN)) {
+    console.log("Invalid input, must be numbers");
+  } else {
+    console.log(calculateExercises(hours, target));
+  }
 }
 
 export default calculateExercises;
