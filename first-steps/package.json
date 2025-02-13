@@ -2,11 +2,13 @@
   "name": "first-steps",
   "version": "1.0.0",
   "description": "typescript exersizes",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "ts-node": "ts-node",
     "calculateBmi": "ts-node calculateBmi.ts",
-    "calculateExercises": "ts-node exerciseCalculator.ts"
+    "calculateExercises": "ts-node exerciseCalculator.ts",
+    "start": "ts-node index.ts",
+    "dev": "ts-node-dev index.ts"
   },
   "author": "Samuel Hamer",
   "license": "ISC",
@@ -16,6 +18,10 @@
     "@types/lodash": "^4.17.15",
     "@types/mongoose": "^5.11.96",
     "@types/node": "^22.13.1",
-    "@types/react": "^19.0.8"
+    "@types/react": "^19.0.8",
+    "ts-node-dev": "^2.0.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
   }
 }

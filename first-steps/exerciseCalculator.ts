@@ -48,3 +48,5 @@ if (isNaN(target) || hours.some(isNaN)) {
 } else {
   console.log(calculateExercises(hours, target));
 }
+
+export default calculateExercises;

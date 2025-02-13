@@ -19,3 +19,5 @@ if (isNaN(height) || isNaN(weight)) {
 } else {
   console.log(calculateBmi(height, weight));
 }
+
+export default calculateBmi;
