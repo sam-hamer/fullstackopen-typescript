@@ -13,12 +13,18 @@ const getPatientsWithoutSSN = (): PatientWithoutSSN[] => {
   return patients.map(({ ssn, ...rest }) => rest);
 };
 
+const getPatient = (id: string): Patient | undefined => {
+  return patients.find((patient) => patient.id === id);
+};
+
 const addPatient = (patient: NewPatient): Patient => {
   const newPatient = {
     ...patient,
     id: uuid(),
+    entries: [],
   };
   patients.push(newPatient);
   return newPatient;
 };
-export default { getPatients, getPatientsWithoutSSN, addPatient };
+
+export default { getPatients, getPatientsWithoutSSN, addPatient, getPatient };
